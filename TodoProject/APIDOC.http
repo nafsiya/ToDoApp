@@ -1,0 +1,65 @@
+#--------------User view------
+
+#API call for register user
+###
+POST http://127.0.0.1:8000/user
+Content-Type: application/json
+
+{
+  "username":"bibinaa@23",
+  "email":"bibinaa@23gmail.com",
+  "password":"bibinaa@23"
+}
+
+
+# -----------------todoview-----------
+#API call for todo create
+###
+POST http://127.0.0.1:8000/todo
+Content-Type: application/json
+Authorization: Basic anu@123:passwordanu@123
+
+{
+    "title":"Django rest frame work project1",
+    "description":"DRF based CRUD application using rest frame work",
+    "due_date":"2026-10-25"
+}
+
+#API call for list todo
+
+###
+GET http://127.0.0.1:8000/todo
+Authorization: Basic anu@123:passwordanu@123
+
+
+#API call for get a student details
+
+###
+GET http://127.0.0.1:8000/todo/details/1
+Authorization: Basic anu@123:passwordanu@123
+
+#API call for update student data
+###
+PUT  http://127.0.0.1:8000/todo/details/1
+Content-Type: application/json
+Authorization: Basic anu@123:passwordanu@123
+
+{
+"id": 1,
+  "owner": {
+    "username": "manu@123",
+    "email": "manu@gmail.com",
+    "password": "pbkdf2_sha256$1500000$eOjAs8tItUPB9OdCb8d29o$Mc89RvTBKP7WApLxH/SN6vmvi03dlMxCSo5rCwdUobk="
+  },
+  "title": "Django project1",
+  "description": "DRF based CRUD application",
+  "created_date": "2026-10-13",
+  "due_date": "2026-10-19",
+  "status": "completed"
+}
+
+
+#API call for students status
+###
+GET http://127.0.0.1:8000/todo/status/
+Authorization: Basic anu@123:passwordanu@123
